@@ -10,7 +10,7 @@ export async function initStockfish(): Promise<any> {
   
   try {
     // Dynamic import for stockfish
-    const StockfishModule = await import('stockfish-nnue.wasm');
+    const StockfishModule = await import('stockfish-nnue.wasm/stockfish.js');
     const Stockfish = StockfishModule.default || StockfishModule;
     
     stockfishEngine = await Stockfish();
